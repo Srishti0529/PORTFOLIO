@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div id="header-text">
+                <h1>Hello! <span>Srishti &#9829;</span> This Side</h1>
+
+            </div>
+        </div>
+    </div>
+    <div id="id">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="my.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hello!! My name is Srishti and I am a website developer. I am really hardworking and sincere
+                        learner. I have good command in my speaking skills. I have a good confidence and have ability to
+                        learn things readily. I am
+                        friendly,kind and a hardworker. I can be a good asset to your company. &#9829; </p>
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C++</span><br>Programmer</li>
+                            <li><span>Web Development</span><br>Building Websites</li>
+                            <li><span>Communication skills</span><br>Learning</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span>C++</span><br>Programmer</li>
+                            <li><span>Frontend Developer</span><br>Building Websites</li>
+                            <li><span>Backend Developer</span><br>Learning </li>
+                        </ul>
+                    </div> <div class="tab-contents " id="education">
+                        <ul>
+                        <li><span>2020</span><br>10th with 96.2%</li>
+                        <li><span>2022</span><br>12th with 91%</li>
+                        <li><span>2023</span><br>Btech CSDS 1st year with 8.87cgpa</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="container">
+                <h1 class="sub-title">Services</h1>
+                <div class="services-list">
+                    <div>
+
+                        <h2>Web Design</h2>
+                        <p>I can create effective web pages for every service you need.</p> <a href="#">Know More</a>
+                    </div>
+
+                    <div>
+
+                        <h2>Coding</h2>
+                        <p>I have a good knowledge of c++, c, javascript, css and javascript.</p>
+                        <a href="#">Know More</a>
+                    </div>
+                    <div>
+
+                        <h2>Excel</h2>
+                        <p>I have a good knowledge of excel also .</p>
+                        <a href="#">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-links");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-links");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+</body>
+
+</html>
